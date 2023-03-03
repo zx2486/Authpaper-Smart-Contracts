@@ -7,7 +7,7 @@ Welcome to review the code and post any problem. You may also use the code for y
 
 We have the following contracts:
 
-AUPC folder:
+# AUPC folder
 AUPC.sol, the AUPC ERC-20 smart contract. 
 It is implemented on the ETH network here: https://etherscan.io/address/0x500df47e1df0ef06039218dcf0960253d89d6658
 There is a transfer limitation (lockup period) on holding the coin.
@@ -24,7 +24,7 @@ MultiSend.sol, a contract to send tokens to multiple accounts and reduce gas spe
 
 multiSendSelfClaim.sol, a contract to send tokens to multiple accounts, but it is claimed by the recipient so the gas is paid by the recipient
 
-5050 folder:
+# 5050 folder
 This folder keeps smart contract used in a membership contract with profit sharing mechanism (so call 5050). 
 The production system is working on the Tron network, and a demo platform is implemented on ETH Goerli testnet.
 But the production system is closed already as the client bankrupted and government judged them as ponzi scheme.
@@ -51,4 +51,31 @@ When all 6 centers are filled, the room is completed.
 The half donations from the 1st center will be sent to the auto_recurring_balance account so when the old room is completed, a new room starts automatically using this account to give donations.
 For the donations from the 2nd center, 2.5% of it will go to the platform as platform profit.
 Remember this mechanism can be treated as Ponzi scheme in some countries and please do not use unless you know what you are doing both technically and legally.
+
+
+# NFT_class folder
+The contracts I have used during my NFT class.
+Administrator.sol, modifier contract to allow some functions to be called by admin only.
+IERC20.sol, interface to ERC-20.
+SafeMath.sol, Wrappers over Solidity's arithmetic operations with added overflow checks.
+Address.sol, a library contract for Collection of functions related to the address type
+Context.sol, an abstract contract to help users finding the function caller and calling data
+IERC20.sol, IERC721.sol, IERC721Receiver.sol, IERC721Metadata.sol,IERC1155.sol,IERC1155MetadataURI.sol,IERC1155Receiver.sol are interface contracts.
+ERC721.sol,ERC721Holder.sol,ERC1155.sol,ERC1155Holder.sol are standard ERC721 and ERC1155 contracts from OpenZeppelin
+
+Students did not read these contracts, they only play with basicNFT.sol and basic1155.sol to build their own NFT / 1155.
+
+In the class, there is a simple exercise to write a number counting contract. The answer is pigAnswer.sol.
+
+
+# ERC20_class folder
+The contracts I have used during my ERC-20 class.
+Administrator.sol, modifier contract to allow some functions to be called by admin only.
+SafeMath.sol, Wrappers over Solidity's arithmetic operations with added overflow checks.
+IERC20.sol, interface to ERC-20.
+ERC20Detailed.sol, ERC-20 contract. But students did not use them directly.
+
+Students played with ERC20_CFOT.sol to create their own ERC-20 tokens (so they can focus on what they need to change).
+ERC20_CFOT_flat.sol combines all contracts into one file so they can publish the source code on etherscan (goerli testnet).
+
 
